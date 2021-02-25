@@ -5,8 +5,6 @@ from rest_framework.views import Response
 from api import models, serializers
 from api.integrations.github import GithubApi
 
-from django.shortcuts import get_object_or_404
-
 # TODOS:
 # 1 - Buscar organização pelo login através da API do Github
 # 2 - Armazenar os dados atualizados da organização no banco
