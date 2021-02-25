@@ -14,7 +14,7 @@ from api.integrations.github import GithubApi
 
 class OrganizationViewSet(viewsets.ModelViewSet):
 
-    queryset = models.Organization.objects.all()
+    queryset = models.Organization.objects.order_by('-score', 'name').all()
     serializer_class = serializers.OrganizationSerializer
     lookup_field = "login"
 
